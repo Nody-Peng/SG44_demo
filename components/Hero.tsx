@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, MapPin, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { CONFERENCE_INFO } from "../constants";
 
 const Hero: React.FC = () => {
@@ -58,7 +58,8 @@ const Hero: React.FC = () => {
           {CONFERENCE_INFO.themeEn}
         </p>
 
-        {/* Info Bar */}
+        {/* ❌ 隱藏時間地點資訊區塊 - 整段註解掉 */}
+        {/* 
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-stone-600">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-[#F0F4F1] rounded-full">
@@ -73,6 +74,7 @@ const Hero: React.FC = () => {
             <span className="font-semibold">{CONFERENCE_INFO.location}</span>
           </div>
         </div>
+        */}
 
         {/* CTA Button - 籌備會報名 */}
         <div className="mt-12">
