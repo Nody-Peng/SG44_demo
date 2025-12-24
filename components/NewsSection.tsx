@@ -38,8 +38,34 @@ const NewsSection: React.FC = () => {
                   </div>
                 </div>
 
+                {/* === 公告附件下載（PDF） === */}
+                <div className="mt-8 mb-6 p-4 border border-stone-200 rounded-md bg-white flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-stone-100 rounded text-[#5F7161]">
+                      <FileText size={18} />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-stone-800">
+                        會議正式公文
+                      </p>
+                      {/* <p className="text-xs text-stone-500">
+                        官方正式公文下載
+                      </p> */}
+                    </div>
+                  </div>
+
+                  <a
+                    href="/會議正式公文.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-bold text-[#5F7161] hover:underline"
+                  >
+                    下載 PDF
+                  </a>
+                </div>
+
                 {/* 行動按鈕區 */}
-                <div className="mt-8 p-6 bg-[#F8FAF9] rounded-lg border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="p-6 bg-[#F8FAF9] rounded-lg border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-[#5F7161] rounded text-white">
                       <FileText size={20} />
