@@ -90,17 +90,29 @@ const NewsSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* 聯絡資訊 */}
-              <div className="bg-stone-50 px-6 md:px-8 py-4 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-2 text-xs text-stone-500">
-                  <Mail size={14} className="text-[#869D85]" />
-                  <span>sg44@nccu.edu.tw</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-stone-500">
-                  <Phone size={14} className="text-[#869D85]" />
-                  <span>02-29393091 分機 50641</span>
-                </div>
+              {/* 聯絡資訊（可點擊） */}
+            <div className="bg-stone-50 px-6 md:px-8 py-4 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-2 text-xs text-stone-500">
+                <Mail size={14} className="text-[#869D85]" />
+                <a
+                  href="mailto:sg44@nccu.edu.tw"
+                  className="hover:underline"
+                >
+                  sg44@nccu.edu.tw
+                </a>
               </div>
+
+              <div className="flex items-center gap-2 text-xs text-stone-500">
+                <Phone size={14} className="text-[#869D85]" />
+                <a
+                  href="tel:+886229393091"
+                  className="hover:underline"
+                >
+                  02-2939-3091 分機 50641
+                </a>
+              </div>
+            </div>
+
             </article>
           ))}
         </div>
