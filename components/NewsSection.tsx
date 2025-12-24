@@ -49,7 +49,7 @@ const NewsSection: React.FC = () => {
                         籌備會報名表單
                       </p>
                       <p className="text-xs text-stone-500">
-                        請於 12/26 (五) 中午 12:00 前完成
+                        請於114年12月26日(星期五)中午12時前完成
                       </p>
                     </div>
                   </div>
