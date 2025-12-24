@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
             </svg>
           </a>
           <p className="mt-4 text-sm text-stone-500">
-            報名截止：114年12月26日(星期五)中午12時
+            報名截止：114年12月26日(星期五)中午17時
           </p>
         </div>
       </div>
