@@ -6,6 +6,9 @@ export interface NewsItem {
   title: string;
   link?: string;
   content?: string; // 新增詳細內容欄位
+  meetingLink?: string; // 新增：會議連結（選填）
+  meetingLinkText?: string; // 新增：連結按鈕文字（選填）
+  meetingTime?: string; // 新增：會議時間說明（選填）
 }
 
 export interface Topic {

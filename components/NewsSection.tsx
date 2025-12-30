@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, FileText } from "lucide-react";
+import { Mail, Phone, FileText, Video } from "lucide-react";
 import { NEWS_DATA } from "../constants";
 import SectionTitle from "./SectionTitle";
 
@@ -48,9 +48,6 @@ const NewsSection: React.FC = () => {
                       <p className="text-sm font-bold text-stone-800">
                         會議正式公文
                       </p>
-                      {/* <p className="text-xs text-stone-500">
-                        官方正式公文下載
-                      </p> */}
                     </div>
                   </div>
 
@@ -64,7 +61,7 @@ const NewsSection: React.FC = () => {
                   </a>
                 </div>
 
-                {/* 行動按鈕區 */}
+                {/* 行動按鈕區 - 報名表單 */}
                 <div className="p-6 bg-[#F8FAF9] rounded-lg border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-[#5F7161] rounded text-white">
@@ -88,31 +85,64 @@ const NewsSection: React.FC = () => {
                     前往填寫 Google 表單
                   </a>
                 </div>
+
+                {/* === 新增：會議連結區塊（條件顯示） === */}
+                {news.meetingLink && (
+                  <div className="mt-4 p-6 bg-white rounded-lg border-2 border-[#869D85] flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-[#869D85] rounded text-white">
+                        <Video size={20} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-stone-800">
+                          線上視訊會議連結
+                        </p>
+                        <p className="text-xs text-stone-500">
+                          {news.meetingTime || "會議時間請見公告內容"}
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={news.meetingLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#869D85] text-white px-8 py-2.5 rounded shadow-sm hover:bg-[#6b7d6a] transition-colors font-bold text-sm flex items-center gap-2"
+                    >
+                      <span>{news.meetingLinkText || "加入會議"}</span>
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* 聯絡資訊（可點擊） */}
-            <div className="bg-stone-50 px-6 md:px-8 py-4 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-2 text-xs text-stone-500">
-                <Mail size={14} className="text-[#869D85]" />
-                <a
-                  href="mailto:sg44@nccu.edu.tw"
-                  className="hover:underline"
-                >
-                  sg44@nccu.edu.tw
-                </a>
-              </div>
+              <div className="bg-stone-50 px-6 md:px-8 py-4 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-2 text-xs text-stone-500">
+                  <Mail size={14} className="text-[#869D85]" />
+                  <a href="mailto:sg44@nccu.edu.tw" className="hover:underline">
+                    sg44@nccu.edu.tw
+                  </a>
+                </div>
 
-              <div className="flex items-center gap-2 text-xs text-stone-500">
-                <Phone size={14} className="text-[#869D85]" />
-                <a
-                  href="tel:+886229393091"
-                  className="hover:underline"
-                >
-                  02-2939-3091 分機 50641
-                </a>
+                <div className="flex items-center gap-2 text-xs text-stone-500">
+                  <Phone size={14} className="text-[#869D85]" />
+                  <a href="tel:+886229393091" className="hover:underline">
+                    02-2939-3091 分機 50641
+                  </a>
+                </div>
               </div>
-            </div>
-
             </article>
           ))}
         </div>

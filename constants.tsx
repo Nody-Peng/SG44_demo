@@ -54,6 +54,10 @@ export const NEWS_DATA: NewsItem[] = serverData?.news || [
 • 聯絡信箱：sg44@nccu.edu.tw（大會專用信箱）
 • 聯絡電話：02-2939-3091 分機 50641（蕭助教分機 ）
     `,
+    // 新增：會議連結相關資訊
+    meetingLink: "https://meet.google.com/jcq-owyh-wnt", // 請替換為實際的會議連結
+    meetingLinkText: "加入 Google Meet 視訊會議",
+    meetingTime: "114年12月30日（週二）下午14：00",
   },
 ];
 
