@@ -14,6 +14,44 @@ export const CONFERENCE_INFO: ConferenceInfo = serverData?.info || {
 
 export const NEWS_DATA: NewsItem[] = serverData?.news || [
   {
+    id: 2,
+    date: "114-12-30",
+    category: "會議連結",
+    title: "【會議連結】第44屆測量與空間資訊研討會第一次籌備會議視訊連結",
+    content: `
+第44屆測量與空間資訊研討會（SG44）第一次籌備會議視訊連結
+
+各位與會代表您好：
+
+感謝您報名參加本次籌備會議。會議相關資訊如下：
+
+【會議資訊】
+ • 會議時間：114年12月30日（週二）下午14:00
+ • 會議方式：Google Meet 線上視訊會議
+ • 會議連結：請點擊下方「加入 Google Meet 視訊會議」按鈕
+
+【注意事項】
+1. 請於會議開始前 5-10 分鐘測試設備及網路連線。
+2. 建議使用 Chrome 或 Edge 瀏覽器以獲得最佳體驗。
+3. 請確保麥克風及視訊鏡頭運作正常。
+4. 會議期間請將麥克風設為靜音，發言時再開啟。
+5. 如有任何技術問題，請立即聯繫大會工作人員。
+
+【聯絡資訊】
+如有任何問題，請隨時與我們聯繫：
+ • 聯絡信箱：sg44@nccu.edu.tw
+ • 聯絡電話：02-2939-3091 分機 50641
+
+期待與您線上相見！
+
+國立政治大學地政學系
+第44屆測量與空間資訊研討會籌備小組 敬上
+    `,
+    meetingLink: "https://meet.google.com/jcq-owyh-wnt",
+    meetingLinkText: "加入 Google Meet 視訊會議",
+    meetingTime: "114年12月30日（週二）下午14:00",
+  },
+  {
     id: 1,
     date: "114-12-15",
     category: "重要公告",
@@ -54,10 +92,6 @@ export const NEWS_DATA: NewsItem[] = serverData?.news || [
 • 聯絡信箱：sg44@nccu.edu.tw（大會專用信箱）
 • 聯絡電話：02-2939-3091 分機 50641（蕭助教分機 ）
     `,
-    // 新增：會議連結相關資訊
-    meetingLink: "https://meet.google.com/jcq-owyh-wnt", // 請替換為實際的會議連結
-    meetingLinkText: "加入 Google Meet 視訊會議",
-    meetingTime: "114年12月30日（週二）下午14：00",
   },
 ];
 
@@ -141,6 +175,7 @@ export const AI_SYSTEM_INSTRUCTION = `
 開幕時間：115年8月20日 10:00。
 徵稿主題共有 10 項子題。
 目前最新公告：114年12月30日(二) 14:00 將召開第一次籌備會議。
+會議連結已公告，請參閱最新消息。
 聯絡信箱：sg44@nccu.edu.tw。
 請保持專業、禮貌且簡潔的口吻。
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { FileText } from "lucide-react";
+import { Video } from "lucide-react";
 import { CONFERENCE_INFO } from "../constants";
 
 const Hero: React.FC = () => {
@@ -58,34 +58,16 @@ const Hero: React.FC = () => {
           {CONFERENCE_INFO.themeEn}
         </p>
 
-        {/* ❌ 隱藏時間地點資訊區塊 - 整段註解掉 */}
-        {/* 
-        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-stone-600">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#F0F4F1] rounded-full">
-              <Calendar className="w-5 h-5 text-[#5F7161]" />
-            </div>
-            <span className="font-semibold">{CONFERENCE_INFO.date}</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#F0F4F1] rounded-full">
-              <MapPin className="w-5 h-5 text-[#5F7161]" />
-            </div>
-            <span className="font-semibold">{CONFERENCE_INFO.location}</span>
-          </div>
-        </div>
-        */}
-
-        {/* CTA Button - 籌備會報名 */}
+        {/* CTA Button - 加入會議 */}
         <div className="mt-12">
           <a
-            href="https://forms.gle/b5ZzPh7sxNj1S5G67"
+            href="https://meet.google.com/jcq-owyh-wnt"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#5F7161] text-white px-10 py-4 rounded-lg shadow-lg hover:bg-[#4a584b] hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-bold text-base md:text-lg group"
+            className="inline-flex items-center gap-3 bg-[#869D85] text-white px-10 py-4 rounded-lg shadow-lg hover:bg-[#6b7d6a] hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-bold text-base md:text-lg group"
           >
-            <FileText className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-            <span>點此報名第一次籌備會議</span>
+            <Video className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            <span>加入第一次籌備會議</span>
             <svg
               className="w-5 h-5 group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -96,12 +78,12 @@ const Hero: React.FC = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M9 5l7 7-7 7"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
           </a>
           <p className="mt-4 text-sm text-stone-500">
-            報名截止：114年12月26日(星期五)中午17時
+            會議時間：114年12月30日（週二）下午14：00
           </p>
         </div>
       </div>

@@ -61,7 +61,8 @@ const NewsSection: React.FC = () => {
                   </a>
                 </div>
 
-                {/* 行動按鈕區 - 報名表單 */}
+                {/* ❌ 隱藏報名表單區塊 */}
+                {/* 
                 <div className="p-6 bg-[#F8FAF9] rounded-lg border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-[#5F7161] rounded text-white">
@@ -85,10 +86,11 @@ const NewsSection: React.FC = () => {
                     前往填寫 Google 表單
                   </a>
                 </div>
+                */}
 
-                {/* === 新增：會議連結區塊（條件顯示） === */}
+                {/* === 會議連結區塊（條件顯示，改為與報名表單相同格式） === */}
                 {news.meetingLink && (
-                  <div className="mt-4 p-6 bg-white rounded-lg border-2 border-[#869D85] flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="p-6 bg-[#F8FAF9] rounded-lg border border-[#E2E8E4] flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-[#869D85] rounded text-white">
                         <Video size={20} />
@@ -106,22 +108,9 @@ const NewsSection: React.FC = () => {
                       href={news.meetingLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#869D85] text-white px-8 py-2.5 rounded shadow-sm hover:bg-[#6b7d6a] transition-colors font-bold text-sm flex items-center gap-2"
+                      className="bg-[#869D85] text-white px-8 py-2.5 rounded shadow-sm hover:bg-[#6b7d6a] transition-colors font-bold text-sm"
                     >
-                      <span>{news.meetingLinkText || "加入會議"}</span>
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
+                      {news.meetingLinkText || "加入會議"}
                     </a>
                   </div>
                 )}
